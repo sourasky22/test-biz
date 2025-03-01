@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="pt-4">
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                 {[
-                  "24/7 Emergency Service",
+                  "Same Day Service",
                   "Free Estimates",
                   "Licensed & Insured",
                   "100% Satisfaction"
@@ -60,19 +60,6 @@ const Hero = () => {
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-garage-darkBlue/40 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="bg-white rounded-lg p-4 shadow-lg max-w-xs mx-auto lg:ml-0 transform hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-center space-x-3">
-                    <div className="h-12 w-12 rounded-full bg-garage-blue flex items-center justify-center text-white">
-                      <Phone className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Call for a</p>
-                      <p className="font-semibold text-garage-darkBlue">Same-Day Service</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
