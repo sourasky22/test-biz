@@ -1,5 +1,5 @@
 
-import { ArrowRight, Clock, Star, Tool, Wrench } from "lucide-react";
+import { ArrowRight, Clock, Star, Wrench, Settings } from "lucide-react";
 import { IMAGES } from "../assets/images";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,7 @@ const services = [
   {
     title: "New Door Installation",
     description: "Professional installation of high-quality garage doors to enhance your home.",
-    icon: <Tool className="h-6 w-6" />,
+    icon: <Settings className="h-6 w-6" />,
     image: IMAGES.SERVICE_2,
     delay: 0.2,
   },
