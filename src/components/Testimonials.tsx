@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { IMAGES } from "../assets/images";
 import { cn } from "@/lib/utils";
 
 const testimonials = [
@@ -10,7 +9,6 @@ const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     position: "Homeowner",
-    image: IMAGES.PERSON_1,
     text: "The technicians were professional, prompt, and did an excellent job repairing our garage door. They explained everything clearly and even offered maintenance tips. I highly recommend their services!",
     rating: 5,
   },
@@ -18,7 +16,6 @@ const testimonials = [
     id: 2,
     name: "Michael Thompson",
     position: "Business Owner",
-    image: IMAGES.PERSON_2,
     text: "We needed to replace the garage doors for our commercial building, and this company exceeded our expectations. The quality of work was outstanding, and they completed the project on time and within budget.",
     rating: 5,
   },
@@ -26,7 +23,6 @@ const testimonials = [
     id: 3,
     name: "Emily Rodriguez",
     position: "Homeowner",
-    image: IMAGES.PERSON_3,
     text: "I had an emergency situation with my garage door, and they responded quickly even though it was after hours. The repair was done efficiently, and the door has been working perfectly ever since. Great service!",
     rating: 4,
   },
@@ -154,15 +150,6 @@ const Testimonials = () => {
                 >
                   <div className="bg-white rounded-2xl shadow-soft p-8 md:p-10 max-w-3xl mx-auto">
                     <div className="flex flex-col md:flex-row md:items-center gap-6">
-                      <div className="flex-shrink-0">
-                        <div className="h-20 w-20 rounded-full overflow-hidden border-4 border-garage-blue/10">
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name} 
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                      </div>
                       <div>
                         <div className="mb-2 text-amber-500 flex">
                           {Array(5).fill(0).map((_, i) => (
