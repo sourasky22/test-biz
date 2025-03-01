@@ -1,6 +1,6 @@
 
 // Use placeholder images instead of file imports since the images directory doesn't exist
-const logoImage = '/lovable-uploads/df4fae8b-0913-412c-ac2d-644418e63df6.png'; // Logo
+const logoImage = 'src/assets/navbar-logo.jpg' // Logo
 const heroImage = '/lovable-uploads/056d2256-15ec-4044-b4c1-fe718727b0fa.png'; // Hero image
 
 // Service images
