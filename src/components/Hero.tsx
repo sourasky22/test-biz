@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-soft opacity-0 animate-scale-in" style={{ animationDelay: "0.4s" }}>
               <img 
-                src="/lovable-uploads/056d2256-15ec-4044-b4c1-fe718727b0fa.png" 
+                src={IMAGES.HERO}
                 alt="Garage Door Service" 
                 className="w-full h-auto object-cover"
               />
