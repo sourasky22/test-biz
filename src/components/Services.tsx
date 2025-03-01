@@ -1,6 +1,5 @@
 
 import { ArrowRight, Wrench, Settings, Phone } from "lucide-react";
-import { IMAGES } from "../assets/images";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -46,21 +45,21 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
       </div>
       
       <div className="flex items-center mb-4">
-        <div className="h-10 w-10 bg-blue-600/20 rounded-lg flex items-center justify-center text-blue-500">
+        <div className="h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
           {service.icon}
         </div>
-        <h3 className="ml-3 text-xl font-semibold text-white">{service.title}</h3>
+        <h3 className="ml-3 text-xl font-semibold text-gray-900">{service.title}</h3>
       </div>
       
-      <p className="text-gray-400 mb-6">{service.description}</p>
+      <p className="text-gray-600 mb-6">{service.description}</p>
       
       <div className="flex justify-between items-center">
-        <Button variant="outline" className="group border-blue-500/70 text-blue-400 hover:bg-blue-500/80 hover:text-white">
+        <Button variant="outline" className="group border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
           <span>Details</span>
           <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Button>
 
-        <Button className="bg-blue-500/80 hover:bg-blue-600">
+        <Button className="bg-blue-600 hover:bg-blue-700">
           <Phone className="mr-2 h-4 w-4" />
           <span>Call Now</span>
         </Button>
@@ -71,16 +70,16 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 md:py-20 bg-neutral-900">
+    <section id="services" className="py-16 md:py-20 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12 opacity-0 animate-fade-in">
-          <div className="inline-block bg-blue-600/20 px-4 py-1.5 rounded-full mb-4">
-            <span className="text-blue-400 font-medium text-sm">Professional Services</span>
+          <div className="inline-block bg-blue-100 px-4 py-1.5 rounded-full mb-4">
+            <span className="text-blue-700 font-medium text-sm">Professional Services</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Reliable Garage Door Solutions
           </h2>
-          <p className="text-gray-400">
+          <p className="text-gray-600">
             We provide expert repair and installation services for all types of garage doors.
           </p>
         </div>
@@ -92,7 +91,7 @@ const Services = () => {
         </div>
         
         <div className="mt-12 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          <Button size="lg" className="bg-blue-500/80 hover:bg-blue-600">
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
             <span>Get A Free Quote</span>
             <Phone className="ml-2 h-4 w-4" />
           </Button>

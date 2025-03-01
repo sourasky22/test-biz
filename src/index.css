@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 97%;
+    --foreground: 0 0% 12%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 215 80% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 221 83% 53%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 215 80% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 221 83% 53%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 215 80% 40%;
 
     --radius: 0.5rem;
   }
@@ -43,11 +43,11 @@
   }
 
   body {
-    @apply bg-neutral-900 text-white font-sans;
+    @apply bg-white text-gray-800 font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight;
+    @apply font-heading font-semibold tracking-tight text-gray-900;
   }
 
   h1 {
@@ -81,27 +81,27 @@
   }
 
   .btn-primary {
-    @apply bg-blue-600/80 text-white px-6 py-3 rounded-md transition-all duration-300 hover:bg-blue-700/90 hover:shadow-blue-900/30 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-opacity-50;
+    @apply bg-blue-600 text-white px-6 py-3 rounded-md transition-all duration-300 hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-opacity-50;
   }
 
   .btn-outline {
-    @apply border-2 border-blue-500/70 text-blue-400 px-6 py-[10px] rounded-md transition-all duration-300 hover:bg-blue-500/80 hover:text-white hover:shadow-blue-900/30 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-opacity-50;
+    @apply border-2 border-blue-600 text-blue-600 px-6 py-[10px] rounded-md transition-all duration-300 hover:bg-blue-600 hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-opacity-50;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-blue-900/20 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
   }
 
   .nav-link {
-    @apply relative text-gray-400 font-medium transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500/80 after:transition-all after:duration-300 hover:text-blue-400 hover:after:w-full;
+    @apply relative text-gray-700 font-medium transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:text-blue-600 hover:after:w-full;
   }
 
   .active-nav-link {
-    @apply text-blue-400 after:w-full;
+    @apply text-blue-600 after:w-full;
   }
   
   .glass-card {
-    @apply bg-neutral-800/70 backdrop-blur-sm border border-neutral-700/50 rounded-xl shadow-lg;
+    @apply bg-white/90 backdrop-blur-sm border border-gray-200 rounded-xl shadow-md;
   }
 }
 
@@ -135,6 +135,7 @@
   }
   
   .glass-effect {
-    @apply bg-neutral-800 bg-opacity-70 backdrop-blur-md;
+    @apply bg-white bg-opacity-80 backdrop-blur-md;
   }
 }
+
