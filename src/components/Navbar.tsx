@@ -43,8 +43,8 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <Button className="flex items-center">
-          <Phone className="mr-2 h-4 w-4" />
-          <span>Call Now: {siteConfig.contact.phone}</span>
+          <Phone className="h-4 w-4" />
+          <span className="hidden sm:inline ml-2">{siteConfig.contact.phone}</span>
         </Button>
       </div>
     </nav>
