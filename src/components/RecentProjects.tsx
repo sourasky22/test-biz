@@ -28,10 +28,9 @@ const RecentProjects = () => {
               className="rounded-lg overflow-hidden shadow-soft hover:shadow-hover transition-shadow duration-300 h-64"
             >
               <div 
-                className="w-full h-full bg-center bg-no-repeat"
+                className="w-full h-full bg-center bg-no-repeat bg-cover"
                 style={{ 
-                  backgroundImage: `url(${image})`,
-                  backgroundSize: 'cover'
+                  backgroundImage: `url(${image})`
                 }}
                 aria-label={`Recent garage door project ${index + 1}`}
               />
