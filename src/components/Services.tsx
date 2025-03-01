@@ -1,5 +1,5 @@
 
-import { ArrowRight, Tool, Wrench, Settings, Phone } from "lucide-react";
+import { ArrowRight, Wrench, Settings, Phone } from "lucide-react";
 import { IMAGES } from "../assets/images";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -22,7 +22,7 @@ const services = [
   {
     title: "Spring Replacement",
     description: "Professional spring repair services to keep your door operating safely.",
-    icon: <Tool className="h-6 w-6" />,
+    icon: <Settings className="h-6 w-6" />,
     image: "https://images.unsplash.com/photo-1593424850077-d0fc851f3a8f?q=80&w=1770&auto=format&fit=crop",
     delay: 0.3,
   },
@@ -32,7 +32,7 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
   return (
     <div 
       className={cn(
-        "bg-neutral-800 rounded-xl shadow-xl p-6 card-hover opacity-0 animate-fade-in border border-neutral-700",
+        "glass-card p-6 card-hover opacity-0 animate-fade-in",
         index % 2 === 0 ? "lg:animate-fade-in-left" : "lg:animate-fade-in-right"
       )}
       style={{ animationDelay: `${service.delay}s` }}
@@ -55,12 +55,12 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
       <p className="text-gray-400 mb-6">{service.description}</p>
       
       <div className="flex justify-between items-center">
-        <Button variant="outline" className="group border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
+        <Button variant="outline" className="group border-blue-500/70 text-blue-400 hover:bg-blue-500/80 hover:text-white">
           <span>Details</span>
           <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Button>
 
-        <Button className="bg-blue-500 hover:bg-blue-600">
+        <Button className="bg-blue-500/80 hover:bg-blue-600">
           <Phone className="mr-2 h-4 w-4" />
           <span>Call Now</span>
         </Button>
@@ -92,7 +92,7 @@ const Services = () => {
         </div>
         
         <div className="mt-12 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
+          <Button size="lg" className="bg-blue-500/80 hover:bg-blue-600">
             <span>Get A Free Quote</span>
             <Phone className="ml-2 h-4 w-4" />
           </Button>
