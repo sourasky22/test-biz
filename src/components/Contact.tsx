@@ -59,6 +59,12 @@ const Contact = () => {
     },
   ];
 
+  console.log("information",information)
+  const encodedLocation = encodeURIComponent(`${information.address}, ${information.city}, ${information.state} ${information.zipCode}`);
+  console.log("encodedLocation",encodedLocation)
+  const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.7227817835845!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808eb456e36f%3A0xe3898438a5b5f7e0!2s${encodedLocation}!5e0!3m2!1sen!2sus!4v1663180036428!5m2!1sen!2sus`;
+
+
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="container mx-auto">
@@ -166,7 +172,7 @@ const Contact = () => {
             
             <div className="bg-white rounded-2xl shadow-soft p-8 overflow-hidden aspect-square">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.7227817835845!2d-122.41941492422!3d37.77492997139881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808eb456e36f%3A0xe3898438a5b5f7e0!2sSan%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1663180036428!5m2!1sen!2sus"
+                src={mapSrc}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
