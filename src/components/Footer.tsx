@@ -1,5 +1,5 @@
 
-import { siteConfig } from "../config/siteConfig";
+import information from "../data";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,15 +9,15 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
-            <p className="text-gray-500 text-sm">© {currentYear} {siteConfig.siteName}. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">© {currentYear} {information.businessName}. All rights reserved.</p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 mt-2 md:mt-0">
-            <a href={`tel:${siteConfig.contact.phone}`} className="text-gray-700 hover:text-blue-600 transition-colors">
-              {siteConfig.contact.phone}
+            <a href={`tel:${information.phone}`} className="text-gray-700 hover:text-blue-600 transition-colors">
+              {information.phoneDisplay}
             </a>
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-gray-700 hover:text-blue-600 transition-colors">
-              {siteConfig.contact.email}
+            <a href={`mailto:${information.email}`} className="text-gray-700 hover:text-blue-600 transition-colors">
+              {information.email}
             </a>
           </div>
         </div>

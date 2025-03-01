@@ -5,33 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, MapPin, Mail, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
-
-const contactInfo = [
-  {
-    icon: <Phone className="h-5 w-5" />,
-    title: "Phone",
-    details: "(555) 123-4567",
-    delay: 0.1,
-  },
-  {
-    icon: <Mail className="h-5 w-5" />,
-    title: "Email",
-    details: "info@garagedoorservice.com",
-    delay: 0.2,
-  },
-  {
-    icon: <MapPin className="h-5 w-5" />,
-    title: "Address",
-    details: "123 Garage Street, City, State 12345",
-    delay: 0.3,
-  },
-  {
-    icon: <Clock className="h-5 w-5" />,
-    title: "Working Hours",
-    details: "Mon-Sat: 7AM - 8PM",
-    delay: 0.4,
-  },
-];
+import information from "../data";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +32,33 @@ const Contact = () => {
     });
   };
 
+  const contactInfo = [
+    {
+      icon: <Phone className="h-5 w-5" />,
+      title: "Phone",
+      details: information.phoneDisplay,
+      delay: 0.1,
+    },
+    {
+      icon: <Mail className="h-5 w-5" />,
+      title: "Email",
+      details: information.email,
+      delay: 0.2,
+    },
+    {
+      icon: <MapPin className="h-5 w-5" />,
+      title: "Address",
+      details: `${information.address}, ${information.city}, ${information.state} ${information.zipCode}`,
+      delay: 0.3,
+    },
+    {
+      icon: <Clock className="h-5 w-5" />,
+      title: "Working Hours",
+      details: information.workingHours,
+      delay: 0.4,
+    },
+  ];
+
   return (
     <section id="contact" className="py-16 md:py-24">
       <div className="container mx-auto">
@@ -78,7 +79,12 @@ const Contact = () => {
             <div className="bg-white rounded-2xl shadow-soft p-8">
               <h3 className="text-2xl font-semibold text-garage-darkBlue mb-6">Send Us a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                action={`https://formsubmit.co/${information.email}`} 
+                method="POST" 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-700">Your Name</label>
@@ -100,7 +106,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder={information.email}
                       required
                       className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-garage-blue focus:border-transparent"
                     />
@@ -114,7 +120,7 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(555) 123-4567"
+                    placeholder={information.phoneDisplay}
                     className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-garage-blue focus:border-transparent"
                   />
                 </div>

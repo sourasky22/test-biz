@@ -1,11 +1,14 @@
 
+import information from "../data";
+
 export const siteConfig = {
-  siteName: "Premium Garage Doors",
+  siteName: information.businessName,
   contact: {
-    phone: "(555) 123-4567",
-    email: "info@premiumgarage.com",
-    address: "123 Garage Street, City, State 12345",
-    workingHours: "Mon-Sat: 7AM - 8PM"
+    phone: information.phone,
+    phoneDisplay: information.phoneDisplay,
+    email: information.email,
+    address: `${information.address}, ${information.city}, ${information.state} ${information.zipCode}`,
+    workingHours: information.workingHours
   }
 };
 

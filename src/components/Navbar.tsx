@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { IMAGES } from "../assets";
-import { siteConfig } from "../config/siteConfig";
+import information from "../data";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +21,13 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav 
@@ -39,13 +46,16 @@ const Navbar = () => {
               style={{ objectPosition: "center" }}
             />
           </div>
+          <span className="ml-2 font-semibold text-garage-darkBlue text-lg">{information.businessName}</span>
         </a>
 
         {/* CTA Button */}
-        <Button className="flex items-center">
-          <Phone className="mr-2 h-4 w-4" />
-          <span>Call Now: {siteConfig.contact.phone}</span>
-        </Button>
+        <a href={`tel:${information.phone}`}>
+          <Button className="flex items-center">
+            <Phone className="mr-2 h-4 w-4" />
+            <span>Call Now: {information.phoneDisplay}</span>
+          </Button>
+        </a>
       </div>
     </nav>
   );

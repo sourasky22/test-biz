@@ -2,8 +2,16 @@
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IMAGES } from "../assets"; 
+import information from "../data";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="pt-28 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="container mx-auto">
@@ -23,15 +31,17 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn-primary">
+              <Button size="lg" className="btn-primary" onClick={scrollToContact}>
                 <span>Free Estimate</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               
-              <Button size="lg" variant="outline" className="btn-outline">
-                <Phone className="mr-2 h-4 w-4" />
-                <span>(555) 123-4567</span>
-              </Button>
+              <a href={`tel:${information.phone}`}>
+                <Button size="lg" variant="outline" className="btn-outline">
+                  <Phone className="mr-2 h-4 w-4" />
+                  <span>{information.phoneDisplay}</span>
+                </Button>
+              </a>
             </div>
             
             <div className="pt-4">
@@ -52,14 +62,12 @@ const Hero = () => {
           </div>
           
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-garage-blue/10 to-transparent rounded-2xl opacity-0 animate-fade-in" style={{ animationDelay: "0.2s" }}></div>
             <div className="relative rounded-2xl overflow-hidden shadow-soft opacity-0 animate-scale-in" style={{ animationDelay: "0.4s" }}>
               <img 
                 src={IMAGES.HERO} 
                 alt="Garage Door Service" 
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-garage-darkBlue/40 to-transparent"></div>
             </div>
           </div>
         </div>

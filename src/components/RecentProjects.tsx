@@ -1,14 +1,12 @@
 
-import { IMAGES } from "../assets";
-
 const RecentProjects = () => {
   const projectImages = [
-    IMAGES.SERVICE_1,
-    IMAGES.SERVICE_2,
-    IMAGES.SERVICE_3,
-    IMAGES.SERVICE_4,
-    IMAGES.SERVICE_5,
-    IMAGES.SERVICE_6,
+    "/lovable-uploads/1e355c9c-bc8c-4b5c-bfc1-52a4726594c3.png",
+    "/lovable-uploads/dc3efa8b-e0d8-4381-8f8d-ffb5b68abf49.png",
+    "/lovable-uploads/62330209-9e8c-41ea-81c8-58d19607f48d.png",
+    "/lovable-uploads/3c189a59-8325-46ad-b8e0-1be0bc687e10.png",
+    "/lovable-uploads/fbb384f3-f876-4363-b5cb-c9edb97ad766.png",
+    "/lovable-uploads/61b7818b-33a6-4c12-9779-9a7cd070431b.png",
   ];
 
   return (
