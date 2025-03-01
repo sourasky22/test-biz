@@ -1,7 +1,7 @@
 
 import { ArrowRight, CheckCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { IMAGES } from "../assets/images";
+import { IMAGES } from "../assets"; // Fixed import path
 
 const Hero = () => {
   return (
