@@ -42,8 +42,7 @@ const Navbar = () => {
             <img
               src={IMAGES.LOGO}
               alt="Logo"
-              className="h-full w-full object-cover"
-              style={{ objectPosition: "center" }}
+              className="h-full w-auto object-contain"
             />
           </div>
           <span className="ml-2 font-semibold text-garage-darkBlue text-lg">{information.businessName}</span>

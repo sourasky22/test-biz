@@ -1,12 +1,14 @@
 
+import { IMAGES } from "../assets";
+
 const RecentProjects = () => {
   const projectImages = [
-    "/lovable-uploads/1e355c9c-bc8c-4b5c-bfc1-52a4726594c3.png",
-    "/lovable-uploads/dc3efa8b-e0d8-4381-8f8d-ffb5b68abf49.png",
-    "/lovable-uploads/62330209-9e8c-41ea-81c8-58d19607f48d.png",
-    "/lovable-uploads/3c189a59-8325-46ad-b8e0-1be0bc687e10.png",
-    "/lovable-uploads/fbb384f3-f876-4363-b5cb-c9edb97ad766.png",
-    "/lovable-uploads/61b7818b-33a6-4c12-9779-9a7cd070431b.png",
+    IMAGES.PROJECT_1,
+    IMAGES.PROJECT_2,
+    IMAGES.PROJECT_3,
+    IMAGES.PROJECT_4,
+    IMAGES.PROJECT_5,
+    IMAGES.PROJECT_6,
   ];
 
   return (
@@ -23,15 +25,16 @@ const RecentProjects = () => {
           {projectImages.map((image, index) => (
             <div 
               key={index} 
-              className="rounded-lg overflow-hidden shadow-soft hover:shadow-hover transition-shadow duration-300"
+              className="rounded-lg overflow-hidden shadow-soft hover:shadow-hover transition-shadow duration-300 h-64"
             >
-              <div className="aspect-w-4 aspect-h-3 relative">
-                <img 
-                  src={image} 
-                  alt={`Recent garage door project ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div 
+                className="w-full h-full bg-center bg-no-repeat"
+                style={{ 
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: 'cover'
+                }}
+                aria-label={`Recent garage door project ${index + 1}`}
+              />
             </div>
           ))}
         </div>

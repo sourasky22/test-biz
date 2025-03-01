@@ -1,5 +1,5 @@
 
-import { ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IMAGES } from "../assets"; 
 import information from "../data";
@@ -17,18 +17,28 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in">
-            <div className="inline-block bg-garage-blue/10 px-4 py-1.5 rounded-full">
-              <span className="text-garage-blue font-medium text-sm">Professional Garage Door Services</span>
-            </div>
-            
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-garage-darkBlue leading-tight">
               Expert Garage Door <br />
               <span className="text-garage-blue">Repair & Installation</span>
             </h1>
             
             <p className="text-lg text-gray-600 max-w-lg">
-              Trust our professional technicians to handle all your garage door needs with precision and care. Fast, reliable service for your peace of mind.
+              Trust our professional technicians to handle all your garage door needs with precision and care. 
+              Serving {information.city}, {information.state}, and surrounding areas.
             </p>
+            
+            <div className="flex flex-wrap gap-4 mt-2 text-gray-600">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-garage-blue" />
+                <span>{information.address}, {information.city}, {information.state} {information.zipCode}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-garage-blue" />
+                <a href={`mailto:${information.email}`} className="hover:text-garage-blue transition-colors">
+                  {information.email}
+                </a>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="btn-primary" onClick={scrollToContact}>
@@ -64,7 +74,7 @@ const Hero = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-soft opacity-0 animate-scale-in" style={{ animationDelay: "0.4s" }}>
               <img 
-                src={IMAGES.HERO} 
+                src="/lovable-uploads/056d2256-15ec-4044-b4c1-fe718727b0fa.png" 
                 alt="Garage Door Service" 
                 className="w-full h-auto object-cover"
               />
