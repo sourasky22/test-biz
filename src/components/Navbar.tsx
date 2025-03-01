@@ -39,6 +39,9 @@ const Navbar = () => {
               style={{ objectPosition: "center" }}
             />
           </div>
+          <span className="ml-3 text-xl font-heading font-bold text-garage-darkBlue">
+            {siteConfig.siteName}
+          </span>
         </a>
 
         {/* CTA Button */}
