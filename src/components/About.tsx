@@ -1,7 +1,7 @@
 
 import { CheckCircle, Award, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { IMAGES } from "../assets/images";
+import { IMAGES } from "@/assets";
 
 const features = [
   {
@@ -31,14 +31,14 @@ const About = () => {
               <div className="absolute -inset-4 bg-gradient-to-tr from-garage-blue/10 to-transparent rounded-2xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-soft">
                 <img 
-                  src={IMAGES.ABOUT} 
+                  src={IMAGES.HERO} // Using HERO image as fallback for ABOUT
                   alt="About Our Company" 
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute top-6 left-6 bg-white rounded-lg p-4 shadow-lg transform rotate-3 animate-float">
                   <div className="flex items-center">
                     <div className="flex -space-x-2">
-                      {[IMAGES.PERSON_1, IMAGES.PERSON_2, IMAGES.PERSON_3].map((image, index) => (
+                      {[IMAGES.SERVICE_1, IMAGES.SERVICE_2, IMAGES.SERVICE_3].map((image, index) => (
                         <div key={index} className="h-10 w-10 rounded-full border-2 border-white overflow-hidden">
                           <img 
                             src={image} 
