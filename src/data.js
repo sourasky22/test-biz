@@ -9,8 +9,8 @@ export const information = {
   phoneDisplay: "(555) 123-4567",
   email: "info@premiumgarage.com",
   workingHours: "Mon-Sat: 7AM - 8PM",
-  theme: "light", // 'light' | 'dark' | 'blue' | 'purple'
-  layout: 1 // 1 | 2 | 3 | 4 | 5
+  theme: "dark", // 'light' | 'dark' | 'blue' | 'purple'
+  layout: 3 // 1 | 2 | 3 | 4 | 5
 };
 
 export default information;
