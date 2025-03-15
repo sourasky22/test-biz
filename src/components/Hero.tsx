@@ -3,8 +3,12 @@ import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IMAGES } from "../assets"; 
 import information from "../data";
+import { useTheme } from "@/contexts/ThemeContext";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
+  const { theme, layout } = useTheme();
+  
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -13,28 +17,32 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-28 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section id="home" className={cn(
+      "pt-28 pb-16 md:pt-32 md:pb-24 overflow-hidden",
+      layout === 3 ? "bg-background" : "",
+      layout === 5 ? "bg-secondary/30" : ""
+    )}>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 opacity-0 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-garage-darkBlue leading-tight">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
               Expert Garage Door <br />
-              <span className="text-garage-blue">Repair & Installation</span>
+              <span className="text-primary">Repair & Installation</span>
             </h1>
             
-            <p className="text-lg text-gray-600 max-w-lg">
+            <p className="text-lg text-muted-foreground max-w-lg">
               Trust our professional technicians to handle all your garage door needs with precision and care. 
               Serving {information.city}, {information.state}, and surrounding areas.
             </p>
             
-            <div className="flex flex-wrap gap-4 mt-2 text-gray-600">
+            <div className="flex flex-wrap gap-4 mt-2 text-muted-foreground">
               <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-garage-blue" />
+                <MapPin className="h-5 w-5 text-primary" />
                 <span>{information.address}, {information.city}, {information.state} {information.zipCode}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-5 w-5 text-garage-blue" />
-                <a href={`mailto:${information.email}`} className="hover:text-garage-blue transition-colors">
+                <Mail className="h-5 w-5 text-primary" />
+                <a href={`mailto:${information.email}`} className="hover:text-primary transition-colors">
                   {information.email}
                 </a>
               </div>
@@ -63,8 +71,8 @@ const Hero = () => {
                   "100% Satisfaction"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center opacity-0 animate-fade-in-left" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
-                    <CheckCircle className="h-5 w-5 text-garage-blue mr-2 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
+                    <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                    <span className="text-foreground">{item}</span>
                   </li>
                 ))}
               </ul>

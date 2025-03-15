@@ -1,6 +1,7 @@
 
 import { cn } from "@/lib/utils";
 import { IMAGES } from "../assets";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const services = [
   {
@@ -42,6 +43,8 @@ const services = [
 ];
 
 const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => {
+  const { theme } = useTheme();
+  
   return (
     <div 
       className={cn(
@@ -58,24 +61,26 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
         />
       </div>
       
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-      <p className="text-gray-600">{service.subtitle}</p>
+      <h3 className="text-xl font-semibold text-foreground mb-2">{service.title}</h3>
+      <p className="text-muted-foreground">{service.subtitle}</p>
     </div>
   );
 };
 
 const Services = () => {
+  const { theme } = useTheme();
+  
   return (
-    <section id="services" className="py-16 md:py-20 bg-gray-50/70">
+    <section id="services" className="py-16 md:py-20 bg-secondary/70">
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12 opacity-0 animate-fade-in">
-          <div className="inline-block bg-blue-100/80 px-4 py-1.5 rounded-full mb-4">
-            <span className="text-blue-700 font-medium text-sm">Professional Services</span>
+          <div className="inline-block bg-primary/10 px-4 py-1.5 rounded-full mb-4">
+            <span className="text-primary font-medium text-sm">Professional Services</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Reliable Garage Door Solutions
           </h2>
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             We provide expert repair and installation services for all types of garage doors.
           </p>
         </div>

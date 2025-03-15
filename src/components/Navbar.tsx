@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { IMAGES } from "../assets";
 import information from "../data";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +35,9 @@ const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-soft py-2" : "bg-transparent py-4"
+        isScrolled 
+          ? "bg-card/90 backdrop-blur-sm shadow-soft py-2" 
+          : "bg-transparent py-4"
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -45,7 +49,7 @@ const Navbar = () => {
               className="h-full w-auto object-contain"
             />
           </div>
-          <span className="ml-2 font-semibold text-garage-darkBlue text-lg">{information.businessName}</span>
+          <span className="ml-2 font-semibold text-foreground text-lg">{information.businessName}</span>
         </a>
 
         {/* CTA Button */}
