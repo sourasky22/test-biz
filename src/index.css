@@ -10,6 +10,7 @@
     --foreground: 0 0% 12%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 12%;
+    --card-border: 0 0% 90%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
     --primary: 215 80% 40%;
@@ -31,7 +32,6 @@
     --accent-color: rgb(37, 99, 235);
     --accent-color-dark: rgb(30, 91, 148);
     --card-bg: rgb(255, 255, 255);
-    --card-border: rgb(229, 231, 235);
   }
 
   .theme-dark {
@@ -39,6 +39,7 @@
     --foreground: 0 0% 95%;
     --card: 240 10% 8%;
     --card-foreground: 0 0% 95%;
+    --card-border: 240 8% 15%;
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 95%;
     --primary: 215 80% 40%;
@@ -60,7 +61,6 @@
     --accent-color: rgb(59, 130, 246);
     --accent-color-dark: rgb(30, 91, 148);
     --card-bg: rgb(31, 41, 55);
-    --card-border: rgb(55, 65, 81);
   }
 
   .theme-blue {
@@ -68,6 +68,7 @@
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
+    --card-border: 214.3 31.8% 91.4%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
     --primary: 221 83% 53%;
@@ -89,7 +90,6 @@
     --accent-color: rgb(3, 105, 161);
     --accent-color-dark: rgb(7, 89, 133);
     --card-bg: rgb(255, 255, 255);
-    --card-border: rgb(186, 230, 253);
   }
 
   .theme-purple {
@@ -97,6 +97,7 @@
     --foreground: 272 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 272 47% 11%;
+    --card-border: 274 32% 91%;
     --popover: 0 0% 100%;
     --popover-foreground: 272 47% 11%;
     --primary: 271 91% 65%;
@@ -118,7 +119,6 @@
     --accent-color: rgb(147, 51, 234);
     --accent-color-dark: rgb(126, 34, 206);
     --card-bg: rgb(255, 255, 255);
-    --card-border: rgb(216, 180, 254);
   }
 
   :root {
@@ -188,7 +188,7 @@
   }
   
   .glass-card {
-    @apply bg-card/90 backdrop-blur-sm border border-card-border rounded-xl shadow-md;
+    @apply bg-card/90 backdrop-blur-sm border border-card rounded-xl shadow-md;
   }
 
   .layout-1 {
@@ -245,3 +245,4 @@
     @apply bg-white bg-opacity-80 backdrop-blur-md;
   }
 }
+
