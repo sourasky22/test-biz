@@ -37,39 +37,6 @@ const Index = () => {
             <Contact />
           </>
         );
-      case 3:
-        return (
-          <>
-            <Hero />
-            <Services />
-            <About />
-            <RecentProjects />
-            <CustomerTestimonials />
-            <Contact />
-          </>
-        );
-      case 4:
-        return (
-          <>
-            <Hero />
-            <CustomerTestimonials />
-            <Services />
-            <RecentProjects />
-            <About />
-            <Contact />
-          </>
-        );
-      case 5:
-        return (
-          <>
-            <Hero />
-            <RecentProjects />
-            <About />
-            <Services />
-            <CustomerTestimonials />
-            <Contact />
-          </>
-        );
       default:
         return (
           <>

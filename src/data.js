@@ -10,7 +10,7 @@ export const information = {
   email: "info@premiumgarage.com",
   workingHours: "Mon-Sat: 7AM - 8PM",
   theme: "dark", // 'light' | 'dark' | 'blue' | 'purple'
-  layout: 3 // 1 | 2 | 3 | 4 | 5
+  layout: 1 // 1 | 2
 };
 
 export default information;

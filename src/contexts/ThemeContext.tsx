@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect } from 'react';
 import information from '../data';
 
 type ThemeType = 'light' | 'dark' | 'blue' | 'purple';
-type LayoutType = 1 | 2 | 3 | 4 | 5;
+type LayoutType = 1 | 2;
 
 interface ThemeContextType {
   theme: ThemeType;
