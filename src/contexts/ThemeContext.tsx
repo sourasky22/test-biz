@@ -19,7 +19,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const theme = information.theme as ThemeType;
   const layout = information.layout as LayoutType;
 
-  // Apply theme class to document body
+  // Apply theme class to document element
   useEffect(() => {
     document.documentElement.classList.remove('theme-light', 'theme-dark', 'theme-blue', 'theme-purple');
     document.documentElement.classList.add(`theme-${theme}`);
