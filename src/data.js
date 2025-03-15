@@ -8,7 +8,9 @@ export const information = {
   phone: "555-123-4567",
   phoneDisplay: "(555) 123-4567",
   email: "info@premiumgarage.com",
-  workingHours: "Mon-Sat: 7AM - 8PM"
+  workingHours: "Mon-Sat: 7AM - 8PM",
+  theme: "light", // 'light' | 'dark' | 'blue' | 'purple'
+  layout: 1 // 1 | 2 | 3 | 4 | 5
 };
 
 export default information;
